@@ -33,3 +33,5 @@ def init_loguru(app: Flask, log_level: int, structured: bool = True):
     logging.basicConfig(handlers=[InterceptHandler()], level=0, force=True)
     logger.remove()
     logger.add(sys.stdout, serialize=structured, level=log_level)
+
+    logger.info("Now logging with loguru")
